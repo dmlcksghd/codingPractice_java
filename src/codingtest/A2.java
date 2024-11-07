@@ -25,7 +25,6 @@ public class A2 {
 			}*/
 			
 			// 아스키 사용해서 변환
-			
 		}
 		return newStr;
 	}

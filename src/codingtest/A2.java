@@ -24,7 +24,12 @@ public class A2 {
 				newStr += Character.toUpperCase(word);
 			}*/
 			
-			// 아스키 사용해서 변환
+			// 아스키 사용해서 변환 (대문자: 65~90, 소문자: 97~122)
+			if(word > 90) {
+				newStr += (char)(word - 32);
+			} else {
+				newStr += (char)(word + 32);
+			}
 		}
 		return newStr;
 	}

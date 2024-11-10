@@ -1,9 +1,9 @@
-package codingtest;
+package codingtest.문자열;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class A4_1 {
+public class A_단어뒤집기_1 {
 
 	static Scanner sc = new Scanner(System.in);
 	
@@ -26,16 +26,7 @@ public class A4_1 {
 		ArrayList<String> results = new ArrayList<>();
 		
 		for(String str : strArr) {
-			char[] ch = str.toCharArray();
-			int lt = 0, rt = str.length()-1;
-			while(lt < rt) {
-				char tmp = ch[lt];
-				ch[lt] = ch[rt];
-				ch[rt] = tmp;
-				
-				lt++; rt--;
-			}
-			String tmp = String.valueOf(ch);
+			String tmp = new StringBuilder(str).reverse().toString();
 			results.add(tmp);
 		}
 		

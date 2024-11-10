@@ -1,8 +1,8 @@
-package codingtest;
+package codingtest.문자열;
 
 import java.util.Scanner;
 
-public class A8 {
+public class A_유효한팬린드롬_1 {
 
 	public static void main(String[] args) {
 		/* 

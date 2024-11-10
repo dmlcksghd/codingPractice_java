@@ -1,8 +1,8 @@
-package codingtest;
+package codingtest.문자열;
 
 import java.util.Scanner;
 
-public class A7_1 {
+public class A_회문문자열 {
 
 	public static void main(String[] args) {
 		//문자열이 입력되면 해당 문자열이 회문 문자열이면 "YES", 회문 문자열이 아니면 “NO"를 출력

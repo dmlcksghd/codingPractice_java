@@ -1,8 +1,8 @@
-package codingtest;
+package codingtest.문자열;
 
 import java.util.Scanner;
 
-public class A9 {
+public class A_숫자만추출 {
 
 	public static void main(String[] args) {
 		/* 
@@ -21,13 +21,11 @@ public class A9 {
 	
 	// g0en2T0s8eSoft
 	private static int solution(String str) {
-		StringBuilder strNum = new StringBuilder();
-		for(char word : str.toCharArray()) {
-			if(Character.isDigit(word)) {
-				strNum.append(word);
-			}
+		int result = 0;
+		for(char ch : str.toCharArray()) {
+			if(ch>=48 && ch<=57) { result = result * 10 + (ch-48); }
 		}
-		return Integer.parseInt(strNum.toString());
+		return result;
 	}
 
 }

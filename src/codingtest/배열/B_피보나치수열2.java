@@ -10,6 +10,8 @@ public class B_피보나치수열2 {
 		int n = sc.nextInt();
 		
 		solution(n);
+		
+		sc.close();
 	}
 
 	private static void solution(int n) {

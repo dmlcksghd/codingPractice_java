@@ -18,6 +18,7 @@ public class B_뒤집은소수 {
 		for(int x : solution(n, arr)) {
 			System.out.print(x + " ");
 		}
+		sc.close();
 
 	}
 

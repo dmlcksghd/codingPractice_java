@@ -12,6 +12,7 @@ public class B_피보나치수열 {
 		for(int x : solution(n)) {
 			System.out.print(x + " ");
 		}
+		sc.close();
 	}
 
 	private static int[] solution(int n) {

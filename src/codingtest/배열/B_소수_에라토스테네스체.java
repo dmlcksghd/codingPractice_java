@@ -10,6 +10,8 @@ public class B_소수_에라토스테네스체 {
 		int n = sc.nextInt();
 		
 		System.out.println(solution(n));
+		
+		sc.close();
 	}
 
 	private static int solution(int n) {

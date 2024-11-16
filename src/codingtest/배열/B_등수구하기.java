@@ -2,7 +2,8 @@ package codingtest.배열;
 
 import java.util.Scanner;
 
-public class B_점수계산 {
+public class B_등수구하기 {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -13,22 +14,24 @@ public class B_점수계산 {
 			arr[i] = sc.nextInt();
 		}
 		
-		System.out.println(solution(n, arr));
+		for(int x : solution(n, arr)) {
+			System.out.print(x + " ");
+		}
+		
 		sc.close();
 	}
 
-	private static int solution(int n, int[] arr) {
-		int result = 0, cnt = 0;
+	private static int[] solution(int n, int[] arr) {
+		int[] result = new int[n];
 		
 		for(int i=0; i<n; i++) {
-			if(arr[i] == 1) {
-				cnt++;
-				result += cnt;
-			} else {
-				cnt = 0;
+			int rank = 1;
+			for(int j=0; j<n; j++) {
+				if(arr[i] < arr[j]) { rank++; }
 			}
+			result[i] = rank;
 		}
-		
 		return result;
 	}
+
 }

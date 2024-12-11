@@ -2,7 +2,7 @@ package codingtest.sortingAndSearching;
 
 import java.util.*;
 
-public class 버블정렬 {
+public class F_버블정렬 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

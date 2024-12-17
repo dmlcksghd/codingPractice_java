@@ -19,18 +19,11 @@ public class F_중복확인 {
 	}
 
 	private static String solution(int n, int[] arr) {
-		String result = "U";
-		Map<Integer, Integer> map = new HashMap<>();
-		for(int i=0; i<n; i++) {
-			map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
+		Set<Integer> set = new HashSet<>();
+		for(int num : arr) {
+			if(!set.add(num)) return "D";
 		}
-		for(int key : map.keySet()) {
-			if(map.get(key) > 1) {
-				result = "D";
-				break;
-			}
-		}
-		return result;
+		return "U";
 	}
 
 }

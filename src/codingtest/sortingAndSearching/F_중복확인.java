@@ -19,9 +19,9 @@ public class F_중복확인 {
 	}
 
 	private static String solution(int n, int[] arr) {
-		Set<Integer> set = new HashSet<>();
-		for(int num : arr) {
-			if(!set.add(num)) return "D";
+		HashSet<Integer> hashSet = new HashSet<>();
+		for (int num : arr) {
+			if (!hashSet.add(num)) return "D";
 		}
 		return "U";
 	}

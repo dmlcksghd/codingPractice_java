@@ -1,22 +1,28 @@
 package codingtest.sortingAndSearching;
 
 import java.util.*;
+import java.io.*;
 
 public class F_좌표정렬 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-		int n = sc.nextInt();
-		ArrayList<Point> arr = new ArrayList<>();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
+		int n = Integer.parseInt(br.readLine());
+		Point[]	points = new Point[n];
+		
 		for (int i = 0; i < n; i++) {
-			int x = sc.nextInt();
-			int y = sc.nextInt();
-			arr.add(new Point(x, y));
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			points[i] = new Point(x, y);
 		}
-		Collections.sort(arr);
-		for(Point o : arr) System.out.println(o.x + " " + o.y);
-		sc.close();
+		Arrays.sort(points);
+		
+		for(Point o : points) sb.append(o.x).append(" ").append(o.y).append("\n");
+		
+		System.out.println(sb);
 	}
 
 }

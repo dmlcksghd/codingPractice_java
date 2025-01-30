@@ -21,7 +21,7 @@ public class G_송아지찾기1 {
                 int x = q.poll();
                 for (int j=0; j<3; j++) {
                     int nx = x + dis[j];
-                    if (x == e) return l;
+                    if (nx == e) return l+1;
                     if (nx >= 1 && nx <= 10000 && check[nx] == 0) {
                         check[nx] = 1;
                         q.offer(nx);

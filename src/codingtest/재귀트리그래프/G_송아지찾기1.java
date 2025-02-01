@@ -1,11 +1,9 @@
 package codingtest.재귀트리그래프;
 
 import java.io.*;
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class G_송아지찾기1 {
-    int result = 0;
     int[] dis = {1, -1, 5};
     int[] check;
     Queue<Integer> q = new LinkedList<>();

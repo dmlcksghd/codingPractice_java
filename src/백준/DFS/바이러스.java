@@ -34,7 +34,6 @@ public class 바이러스 {
         dfs(1);
 
         bw.write(String.valueOf(count));
-
         bw.flush();
         bw.close();
         br.close();
@@ -43,7 +42,7 @@ public class 바이러스 {
     static void dfs(int node) {
         visited[node] = true;
 
-        for(int nextNode : graph[node])
+        for(int nextNode : graph[node]) {
             if(!visited[nextNode]) {
                 count++;
                 dfs(nextNode);
